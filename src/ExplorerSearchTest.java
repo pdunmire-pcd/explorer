@@ -25,4 +25,14 @@ public class ExplorerSearchTest {
         };
         assertEquals(2, ExplorerSearch.reachableArea(island));
     }
+
+    @Test 
+    public void testReachableArea_squareCountsEachCellOnce(){
+        int[][] island = {
+            {0,1},
+            {1,1},
+        };
+
+        assertEquals(4, ExplorerSearch.reachableArea(island));
+    }
 }
