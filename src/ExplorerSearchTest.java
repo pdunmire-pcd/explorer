@@ -64,4 +64,15 @@ public class ExplorerSearchTest {
 
         ExplorerSearch.reachableArea(island);
     }
+
+    @Test 
+    public void testReachableArea_canRouteAroundWater(){
+        int [][] island = {
+            {0,2,1},
+            {1,2,1},
+            {1,1,1},
+        };
+        assertEquals(7, ExplorerSearch.reachableArea(island));
+    }
+    
 }
