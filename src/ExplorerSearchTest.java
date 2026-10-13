@@ -35,4 +35,23 @@ public class ExplorerSearchTest {
 
         assertEquals(4, ExplorerSearch.reachableArea(island));
     }
+
+    @Test 
+    public void testReachableArea_startSurroundedByBlockedTiles(){
+        int[][] island = {
+            {2,3,2},
+            {3,0,2},
+            {2,3,2},
+        };
+
+        assertEquals(1, ExplorerSearch.reachableArea(island));
+    }
+
+    @Test 
+    public void testReachableArea_singleCellIsland(){
+        int [][] island = {
+            {0}
+        };
+        assertEquals(1, ExplorerSearch.reachableArea(island));
+    }
 }
