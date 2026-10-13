@@ -15,6 +15,28 @@ public class ExplorerSearchTest {
         assertEquals(14, actual);
     }
 
+    @Test
+    public void testReachableArea_allLandFromCorner() {
+        int[][] island = {
+            {0,1,1},
+            {1,1,1},
+            {1,1,1},
+        };
+
+        assertEquals(9, ExplorerSearch.reachableArea(island));
+    }
+
+    @Test
+    public void testReachableArea_startSurroundedByBlockedTiles() {
+        int[][] island = {
+            {2,3,2},
+            {3,0,2},
+            {2,3,2},
+        };
+
+        assertEquals(1, ExplorerSearch.reachableArea(island));
+    }
+
     // Add more tests here!
     // Come up with varied cases
 }
