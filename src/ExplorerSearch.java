@@ -86,27 +86,27 @@ public class ExplorerSearch {
         //UP
         newR = curR - 1;
         newC = curC;
-        if(newR >= 0 && island[newR][newC] != 'W'){
+        if(newR >= 0 && island[newR][newC] != 2 && island[newR][newC] != 3){
             possible.add(new int[]{newR, newC});
         }
          //DOWN
         newR = curR + 1;
         newC = curC;
-        if(newR < island.length && island[newR][newC] != 'W'){
+        if(newR < island.length && island[newR][newC] != 2 && island[newR][newC] != 3){
             possible.add(new int[]{newR, newC});
         }
 
         //LEFT
         newR = curR;
         newC = curC - 1;
-        if(newC >= 0 && island[newR][newC] != 'W'){
+        if(newC >= 0 && island[newR][newC] != 2 && island[newR][newC] != 3){
             possible.add(new int[]{newR, newC});
         }
 
         //Right
         newR = curR;
         newC = curC + 1;
-        if(newC < island[newR].length && island[newR][newC] != 'W'){
+        if(newC < island[newR].length && island[newR][newC] != 2 && island[newR][newC] != 3){
             possible.add(new int[] {newR, newC});
         }
 
